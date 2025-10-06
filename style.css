@@ -1,0 +1,611 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f9f9f9;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+a {
+  text-decoration: none;
+  color: #002366;
+}
+
+ul {
+  list-style: none;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: #002366;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-weight: 600;
+  margin: 10px 10px 10px 0;
+  transition: background 0.3s;
+}
+
+.btn-secondary {
+  display: inline-block;
+  background: transparent;
+  color: #002366;
+  border: 2px solid #002366;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-weight: 600;
+  margin: 10px 10px 10px 0;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  background: #001a4a;
+}
+
+.btn-secondary:hover {
+  background: #e6f0ff;
+}
+
+/* Header */
+.header {
+  background: transparent;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  position: sticky;
+  backdrop-filter: blur(10px);
+  top: 0;
+  z-index: 100;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #002366;
+}
+
+.logo span {
+  color: #00BFFF;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li {
+  margin-left: 30px;
+}
+
+.navbar ul li a {
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  color: #00BFFF;
+}
+
+.mobile-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #002366;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0, 35, 102, 0.8), rgba(0, 35, 102, 0.9)), url('https://source.unsplash.com/random/1600x900/?college') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+/* Quick Links */
+.quick-links {
+  background: #f0f7ff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.quick-links h3 {
+  margin-bottom: 20px;
+  color: #002366;
+  font-family: 'Poppins', sans-serif;
+}
+
+.links-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.links-grid a {
+  background: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  transition: transform 0.3s;
+}
+
+.links-grid a:hover {
+  transform: translateY(-5px);
+}
+
+.links-grid i {
+  margin-right: 10px;
+  color: #002366;
+}
+
+/* Updates Section */
+.updates {
+  padding: 60px 0;
+  background: white;
+}
+
+.updates .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.column h3 {
+  color: #002366;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #00BFFF;
+  display: inline-block;
+}
+
+.column h3 i {
+  color: #00BFFF;
+  margin-right: 10px;
+}
+
+.news-list, .event-list {
+  font-size: 0.95rem;
+}
+
+.news-list li, .event-list li {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #ddd;
+}
+
+.event-list .date {
+  display: inline-block;
+  background: #002366;
+  color: white;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-right: 15px;
+  vertical-align: top;
+}
+
+/* Achievements */
+.achievements {
+  background: #002366;
+  color: white;
+  text-align: center;
+  padding: 60px 0;
+}
+
+.achievements h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.stat {
+  font-size: 1.2rem;
+}
+
+.stat .number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  display: block;
+}
+
+/* Why UMA */
+.why-uma {
+  padding: 60px 0;
+  background: #f0f7ff;
+}
+
+.why-uma h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #002366;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.feature {
+  text-align: center;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.feature i {
+  font-size: 2.5rem;
+  color: #002366;
+  margin-bottom: 15px;
+}
+
+.feature h4 {
+  margin-bottom: 10px;
+  color: #002366;
+}
+
+/* CTA Section */
+.cta {
+  background: #e6f0ff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.cta h2 {
+  margin-bottom: 15px;
+  color: #002366;
+}
+
+.cta p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+/* Footer */
+.footer {
+  background: #002366;
+  color: white;
+  padding: 50px 0 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-col h4 {
+  color: #00BFFF;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.footer-col p,
+.footer-col a {
+  color: #ddd;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* .footer-col a:hover {
+  color: #00BFFF;
+} */
+
+.social-icons a {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  /* background: #001a4a; */
+  background-color: #fff;
+  color: #000;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: background 0.3s;
+}
+
+.facebook:hover {
+  color: #fff;
+  background-color: #1280ca;
+  border: 1px solid #fff;
+}
+.instagram:hover{
+  color: #fff;
+  background:rgb(196, 21, 102);
+  border: 1px solid #fff;
+}
+.linkedin:hover {
+  color: #fff;
+  background-color: #002366;
+  border: 1px solid #fff;
+}
+.youtube:hover {
+  color: #fff;
+  background-color: rgb(255, 0, 0);
+  border: 1px solid #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #003b8f;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.footer-bottom a {
+  color: #00BFFF;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .navbar ul.show {
+    display: flex;
+  }
+
+  .mobile-toggle {
+    display: block;
+  }
+
+  .updates .container,
+  .stats,
+  .features {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .event-list .date {
+    margin: 0 auto 10px;
+    display: block;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+}
+
+/* admissions.css */
+
+.page-banner {
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  margin-bottom: 40px;
+}
+
+.page-banner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.page-banner p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.admissions-page {
+  padding: 20px 0;
+  background: #f9f9f9;
+}
+
+.admission-info .steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.step {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.step .number {
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  background: #002366;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.eligibility-table, .fee-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 0.95rem;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.eligibility-table th, .eligibility-table td,
+.fee-table th, .fee-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.eligibility-table th, .fee-table th {
+  background: #002366;
+  color: white;
+}
+
+.eligibility-table tr:hover, .fee-table tr:hover {
+  background: #f0f7ff;
+}
+
+.fee-structure, .eligibility {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  margin: 30px 0;
+}
+
+.fee-structure h2, .eligibility h2, .status-checker h2, .admission-form-section h2 {
+  color: #002366;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #00BFFF;
+}
+
+.admission-form-section {
+  margin: 40px 0;
+}
+
+.admission-form h3 {
+  margin: 25px 0 15px;
+  color: #002366;
+  font-size: 1.3rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin: 15px 0 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.required {
+  color: #e74c3c;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #002366;
+  outline: none;
+}
+
+.upload-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.upload-item {
+  flex: 1;
+  min-width: 250px;
+}
+
+.captcha-box {
+  background: #f0f7ff;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px dashed #002366;
+}
+
+.status-checker {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  margin: 40px 0;
+}
+
+.status-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.status-form input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1;
+  min-width: 200px;
+}
+
+#statusResult {
+  margin-top: 15px;
+  font-weight: 600;
+  color: #002366;
+}
+

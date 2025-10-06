@@ -1,0 +1,132 @@
+<!-- notices.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Latest Notices & Announcements from UMA College - Exam Dates, Holidays, Events">
+  <title>Notices - UMA College</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="pages.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <h1>UMA <span>College</span></h1>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="notices.html" class="active">Notices</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="page-banner" style="background: linear-gradient(rgba(0, 35, 102, 0.5), rgba(0, 35, 102, 0.5)), url('../assets/images/iit_patna.jpg') center/cover; height: 490px;">
+    <div class="container">
+      <h1>Notices & Announcements</h1>
+      <p>Stay updated with the latest college news and events</p>
+      <marquee behavior="scroll " direction="">📢📢Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid reprehenderit deleniti at suscipit molestias <span class="danger">⚠ ⚠ </span>commodi consequuntur veniam quam necessitatibus sequi, <span class="danger">⚠ ⚠ </span> voluptatem maxime voluptas dolor soluta quibusdam. Laboriosam ipsum nobis iusto!
+      Possimus soluta <span class="danger">⚠ ⚠ </span> non sapiente eveniet quasi. Harum optio vitae assumenda impedit voluptatibus cumque eaque enim dicta sed,⚠⚠ illum dolores culpa corrupti blanditiis ratione aliquam. Sunt consectetur laborum incidunt iure quidem.‼️‼️
+      </marquee>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="notices-page">
+    <div class="container">
+      <div class="notice-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="exam">Exams</button>
+        <button class="filter-btn" data-filter="event">Events</button>
+        <button class="filter-btn" data-filter="holiday">Holidays</button>
+      </div>
+
+      <div class="notices-list">
+        <!-- Notice 1 -->
+        <div class="notice-item" data-type="exam">
+          <span class="tag exam">Exam</span>
+          <div class="notice-content">
+            <h3>Semester V Exams Schedule Released</h3>
+            <p>Exams will begin on <strong>June 10, 2025</strong>. All students must report by 8:45 AM.</p>
+            <small>Posted on: May 1, 2025</small>
+          </div>
+        </div>
+
+        <!-- Notice 2 -->
+        <div class="notice-item" data-type="event">
+          <span class="tag event">Event</span>
+          <div class="notice-content">
+            <h3>Career Fair 2025 – June 15</h3>
+            <p>Top companies including TCS, Infosys, and Wipro will visit campus. Register via student portal.</p>
+            <small>Posted on: April 28, 2025</small>
+          </div>
+        </div>
+
+        <!-- Notice 3 -->
+        <div class="notice-item" data-type="holiday">
+          <span class="tag holiday">Holiday</span>
+          <div class="notice-content">
+            <h3>College Closed – Dr. B.R. Ambedkar Jayanti</h3>
+            <p>The college will remain closed on <strong>April 14, 2025</strong> in observance of Ambedkar Jayanti.</p>
+            <small>Posted on: April 10, 2025</small>
+          </div>
+        </div>
+
+        <!-- Notice 4 -->
+        <div class="notice-item" data-type="exam">
+          <span class="tag exam">Exam</span>
+          <div class="notice-content">
+            <h3>Internal Assessment – Week of May 5</h3>
+            <p>All departments will conduct internal tests. Timetable available in department notice boards.</p>
+            <small>Posted on: April 25, 2025</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2025 UMA College. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Filter Notices
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        document.querySelectorAll('.notice-item').forEach(item => {
+          if (filter === 'all' || item.getAttribute('data-type') === filter) {
+            item.style.display = 'flex';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

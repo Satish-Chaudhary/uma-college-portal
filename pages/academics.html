@@ -1,0 +1,177 @@
+<!-- academics.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Academic Programs at UMA College - UG, PG, Diploma in Science, Commerce, Arts & IT">
+  <title>Academics - UMA College</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="pages.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <h1>UMA <span>College</span></h1>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="academics.html" class="active">Academics</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="notices.html">Notices</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="page-banner" style="background: linear-gradient(rgba(0, 35, 102, 0.5), rgba(0, 35, 102, 0.5)), url('../assets/images/iit_patna.jpg') center/cover; height: 490px;">
+    <div class="container">
+      <h1>Academic Programs</h1>
+      <p>Explore our UG, PG & Diploma courses designed for future success</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="academics-page">
+    <div class="container">
+      <section class="course-catalog">
+        <h2><i class="fas fa-graduation-cap"></i> Course Catalog</h2>
+
+        <div class="course-tabs">
+          <button class="tab-btn active" data-tab="ug">Undergraduate</button>
+          <button class="tab-btn" data-tab="pg">Postgraduate</button>
+          <button class="tab-btn" data-tab="diploma">Diploma</button>
+        </div>
+
+        <!-- UG Courses -->
+        <div class="tab-content" id="ug">
+          <div class="course-card">
+            <h3>B.Sc (Physics, Chemistry, Math)</h3>
+            <p>3-year program focusing on core sciences with lab training and research projects.</p>
+            <ul>
+              <li><strong>Duration:</strong> 3 Years</li>
+              <li><strong>Eligibility:</strong> 10+2 Science with 60%</li>
+              <li><strong>Intake:</strong> 60</li>
+            </ul>
+            <a href="../admissions.html" class="btn-primary">Apply Now</a>
+          </div>
+          <div class="course-card">
+            <h3>B.Com</h3>
+            <p>Comprehensive commerce program with accounting, taxation & business law.</p>
+            <ul>
+              <li><strong>Duration:</strong> 3 Years</li>
+              <li><strong>Eligibility:</strong> 10+2 Commerce with 55%</li>
+              <li><strong>Intake:</strong> 80</li>
+            </ul>
+            <a href="../admissions.html" class="btn-primary">Apply Now</a>
+          </div>
+          <div class="course-card">
+            <h3>BCA</h3>
+            <p>Bachelor of Computer Applications with programming, web dev & databases.</p>
+            <ul>
+              <li><strong>Duration:</strong> 3 Years</li>
+              <li><strong>Eligibility:</strong> 10+2 with Math, 50%</li>
+              <li><strong>Intake:</strong> 40</li>
+            </ul>
+            <a href="../admissions.html" class="btn-primary">Apply Now</a>
+          </div>
+        </div>
+
+        <!-- PG Courses -->
+        <div class="tab-content" id="pg" style="display: none;">
+          <div class="course-card">
+            <h3>M.Sc (Physics)</h3>
+            <p>Advanced studies in quantum mechanics, optics, and materials science.</p>
+            <ul>
+              <li><strong>Duration:</strong> 2 Years</li>
+              <li><strong>Eligibility:</strong> B.Sc Physics with 55%</li>
+              <li><strong>Intake:</strong> 30</li>
+            </ul>
+            <a href="../admissions.html" class="btn-primary">Apply Now</a>
+          </div>
+          <div class="course-card">
+            <h3>M.Com</h3>
+            <p>Master's in Commerce with specialization in finance and taxation.</p>
+            <ul>
+              <li><strong>Duration:</strong> 2 Years</li>
+              <li><strong>Eligibility:</strong> B.Com with 50%</li>
+              <li><strong>Intake:</strong> 25</li>
+            </ul>
+            <a href="../admissions.html" class="btn-primary">Apply Now</a>
+          </div>
+        </div>
+
+        <!-- Diploma -->
+        <div class="tab-content" id="diploma" style="display: none;">
+          <div class="course-card">
+            <h3>Diploma in Web Development</h3>
+            <p>1-year intensive course in HTML, CSS, JavaScript, React & Node.js.</p>
+            <ul>
+              <li><strong>Duration:</strong> 1 Year</li>
+              <li><strong>Eligibility:</strong> 10+2 Pass</li>
+              <li><strong>Intake:</strong> 25</li>
+            </ul>
+            <a href="../admissions.html" class="btn-primary">Apply Now</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="academic-resources">
+        <h2><i class="fas fa-book"></i> Academic Resources</h2>
+        <ul class="download-list">
+          <li>
+            <i class="fas fa-calendar-alt"></i>
+            <span>Academic Calendar 2025</span>
+            <a href="../assets/documents/calendar-2025.pdf" class="download-link"><i class="fas fa-download"></i> PDF</a>
+          </li>
+          <li>
+            <i class="fas fa-book-open"></i>
+            <span>Syllabus - B.Sc (PCM)</span>
+            <a href="../assets/documents/calendar-2025.pdf" class="download-link"><i class="fas fa-download"></i> PDF</a>
+          </li>
+          <li>
+            <i class="fas fa-file-alt"></i>
+            <span>Exam Guidelines</span>
+            <a href="../assets/documents/calendar-2025.pdf" class="download-link"><i class="fas fa-download"></i> PDF</a>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2025 UMA College. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Course Tabs
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tab = btn.getAttribute('data-tab');
+        document.querySelectorAll('.tab-content').forEach(c => c.style.display = 'none');
+        document.getElementById(tab).style.display = 'block';
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

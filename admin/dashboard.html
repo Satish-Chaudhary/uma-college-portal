@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard - UMA College</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="admin-layout">
+    <aside class="sidebar">
+      <div class="logo">
+        <h2>UMA <span>Admin</span></h2>
+      </div>
+      <nav class="menu">
+        <ul>
+          <li class="active"><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+          <li><a href="#admissions"><i class="fas fa-pen"></i> Admissions</a></li>
+          <li><a href="#notices"><i class="fas fa-bullhorn"></i> Notices</a></li>
+          <li><a href="#events"><i class="fas fa-calendar-alt"></i> Events</a></li>
+          <li><a href="#gallery"><i class="fas fa-images"></i> Gallery</a></li>
+          <li><a href="#backup"><i class="fas fa-save"></i> Backup Data</a></li>
+          <li><a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+      <header class="admin-header">
+        <h1>Admin Dashboard</h1>
+        <span class="user-welcome">Logged in as: <strong>Dr. Meena Patel (Principal)</strong></span>
+      </header>
+
+      <!-- Stats Overview -->
+      <section class="stats-grid">
+        <div class="stat-card green">
+          <i class="fas fa-pen"></i>
+          <div>
+            <h3>142</h3>
+            <p>New Admissions</p>
+          </div>
+        </div>
+        <div class="stat-card blue">
+          <i class="fas fa-bullhorn"></i>
+          <div>
+            <h3>12</h3>
+            <p>Notices Posted</p>
+          </div>
+        </div>
+        <div class="stat-card orange">
+          <i class="fas fa-calendar-alt"></i>
+          <div>
+            <h3>5</h3>
+            <p>Upcoming Events</p>
+          </div>
+        </div>
+        <div class="stat-card purple">
+          <i class="fas fa-users"></i>
+          <div>
+            <h3>24</h3>
+            <p>Faculty Members</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Admissions Section -->
+      <section id="admissions" class="admin-section">
+        <h2><i class="fas fa-pen"></i> Recent Admission Applications</h2>
+        <table class="data-table">
+          <tr>
+            <th>App ID</th>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+          <tr>
+            <td>UMA2025-001</td>
+            <td>Rahul Kumar</td>
+            <td>B.Sc (PCM)</td>
+            <td><span class="status pending">Pending</span></td>
+            <td>
+              <button class="btn-sm primary">View</button>
+              <button class="btn-sm success">Verify</button>
+            </td>
+          </tr>
+          <tr>
+            <td>UMA2025-002</td>
+            <td>Priya Sharma</td>
+            <td>BCA</td>
+            <td><span class="status verified">Verified</span></td>
+            <td>
+              <button class="btn-sm primary">View</button>
+              <button class="btn-sm warning">Edit</button>
+            </td>
+          </tr>
+          <tr>
+            <td>UMA2025-003</td>
+            <td>Amit Singh</td>
+            <td>B.Com</td>
+            <td><span class="status confirmed">Confirmed</span></td>
+            <td>
+              <button class="btn-sm primary">View</button>
+              <button class="btn-sm secondary">Send Email</button>
+            </td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- Notices Section -->
+      <section id="notices" class="admin-section">
+        <h2><i class="fas fa-bullhorn"></i> Manage Notices</h2>
+        <form class="form-inline" id="noticeForm">
+          <input type="text" placeholder="Enter notice title" required />
+          <textarea placeholder="Write announcement..." required></textarea>
+          <button type="submit" class="btn-primary">Post Notice</button>
+        </form>
+
+        <table class="data-table">
+          <tr>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Actions</th>
+          </tr>
+          <tr>
+            <td>Exam Schedule Released</td>
+            <td>May 1, 2025</td>
+            <td><button class="btn-sm danger">Delete</button></td>
+          </tr>
+          <tr>
+            <td>Career Fair on June 15</td>
+            <td>Apr 28, 2025</td>
+            <td><button class="btn-sm danger">Delete</button></td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- Events Section -->
+      <section id="events" class="admin-section">
+        <h2><i class="fas fa-calendar-alt"></i> Upcoming Events</h2>
+        <form class="form-inline" id="eventForm">
+          <input type="text" placeholder="Event Name" required />
+          <input type="date" required />
+          <textarea placeholder="Description (optional)"></textarea>
+          <button type="submit" class="btn-primary">Add Event</button>
+        </form>
+
+        <ul class="event-list">
+          <li>
+            <strong>Career Fair 2025</strong> - June 15, 2025
+            <button class="btn-sm danger">Remove</button>
+          </li>
+          <li>
+            <strong>Annual Cultural Fest</strong> - July 3, 2025
+            <button class="btn-sm danger">Remove</button>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Gallery Upload -->
+      <section id="gallery" class="admin-section">
+        <h2><i class="fas fa-images"></i> Upload Gallery Photos</h2>
+        <form id="galleryForm" class="upload-form" action="#" method="POST" enctype="multipart/form-data">
+          <div class="form-group">
+            <label>Select Photos</label>
+            <input type="file" multiple accept="image/*" required />
+          </div>
+          <div class="form-group">
+            <label>Caption / Event Name</label>
+            <input type="text" placeholder="e.g., Science Fair 2025" />
+          </div>
+          <button type="submit" class="btn-primary">Upload Photos</button>
+        </form>
+      </section>
+
+      <!-- Backup Section -->
+      <section id="backup" class="admin-section">
+        <h2><i class="fas fa-save"></i> Backup & Export Data</h2>
+        <div class="backup-options">
+          <button class="btn-secondary"><i class="fas fa-file-export"></i> Export Admissions (CSV)</button>
+          <button class="btn-secondary"><i class="fas fa-file-pdf"></i> Download Notices (PDF)</button>
+          <button class="btn-primary"><i class="fas fa-cloud"></i> Full Backup Now</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

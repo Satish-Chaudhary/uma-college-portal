@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Dashboard - UMA College</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="student.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <h1>UMA <span>College</span></h1>
+      </div>
+      <div class="user-menu">
+        <span class="welcome">Welcome, <strong>Rahul Kumar</strong></span>
+        <div class="dropdown">
+          <i class="fas fa-user-circle"></i>
+          <div class="dropdown-menu">
+            <a href="profile.html"><i class="fas fa-cog"></i> Profile Settings</a>
+            <a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Dashboard -->
+  <main class="student-dashboard">
+    <div class="container">
+      <h1>Student Dashboard</h1>
+      <p class="dashboard-subtitle">Roll No: UMA2023-12345 | B.Sc (PCM) - 3rd Year</p>
+
+      <!-- Quick Stats -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <i class="fas fa-calendar-alt"></i>
+          <h3>Timetable</h3>
+          <p><a href="#timetable">View This Week</a></p>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-check-circle"></i>
+          <h3>Attendance</h3>
+          <p>87% Overall</p>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-poll"></i>
+          <h3>Results</h3>
+          <p><a href="#results">Semester V: A+</a></p>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-book"></i>
+          <h3>Materials</h3>
+          <p>12 Notes & Past Papers</p>
+        </div>
+      </div>
+
+      <!-- Timetable -->
+      <section id="timetable" class="dashboard-section">
+        <h2><i class="fas fa-calendar-week"></i> Weekly Timetable</h2>
+        <table class="timetable">
+          <tr>
+            <th>Time</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+          </tr>
+          <tr>
+            <td>9:00–10:00</td>
+            <td>Physics</td>
+            <td>Chemistry</td>
+            <td>Math</td>
+            <td>Physics</td>
+            <td>Chemistry</td>
+          </tr>
+          <tr>
+            <td>10:00–11:00</td>
+            <td>Math</td>
+            <td>Physics</td>
+            <td>Lab (Chem)</td>
+            <td>Math</td>
+            <td>Lab (Phys)</td>
+          </tr>
+          <tr>
+            <td>11:00–12:00</td>
+            <td>English</td>
+            <td>IT</td>
+            <td>English</td>
+            <td>IT</td>
+            <td>IT</td>
+          </tr>
+          <tr>
+            <td>1:00–2:00</td>
+            <td colspan="5" class="break">LUNCH BREAK</td>
+          </tr>
+          <tr>
+            <td>2:00–3:00</td>
+            <td>Elective</td>
+            <td>Sports</td>
+            <td>Elective</td>
+            <td>Sports</td>
+            <td>Project</td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- Results -->
+      <section id="results" class="dashboard-section">
+        <h2><i class="fas fa-poll"></i> Academic Results</h2>
+        <table class="results-table">
+          <tr>
+            <th>Semester</th>
+            <th>CGPA</th>
+            <th>Grade</th>
+            <th>Action</th>
+          </tr>
+          <tr>
+            <td>Semester I</td>
+            <td>8.2</td>
+            <td>A</td>
+            <td><a href="#" class="download-link"><i class="fas fa-download"></i> PDF</a></td>
+          </tr>
+          <tr>
+            <td>Semester II</td>
+            <td>8.6</td>
+            <td>A+</td>
+            <td><a href="#" class="download-link"><i class="fas fa-download"></i> PDF</a></td>
+          </tr>
+          <tr>
+            <td>Semester III</td>
+            <td>8.0</td>
+            <td>A</td>
+            <td><a href="#" class="download-link"><i class="fas fa-download"></i> PDF</a></td>
+          </tr>
+          <tr>
+            <td>Semester IV</td>
+            <td>8.8</td>
+            <td>A+</td>
+            <td><a href="#" class="download-link"><i class="fas fa-download"></i> PDF</a></td>
+          </tr>
+          <tr>
+            <td>Semester V</td>
+            <td>9.4</td>
+            <td>A+</td>
+            <td><a href="#" class="download-link"><i class="fas fa-download"></i> PDF</a></td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- Study Materials -->
+      <section class="dashboard-section">
+        <h2><i class="fas fa-book-open"></i> Study Materials</h2>
+        <p>Download notes, syllabus, and previous year papers.</p>
+        <ul class="materials-list">
+          <li>
+            <i class="fas fa-file-pdf"></i>
+            <span>Physics Unit 3 Notes (PDF)</span>
+            <a href="#" class="download-link"><i class="fas fa-download"></i></a>
+          </li>
+          <li>
+            <i class="fas fa-file-pdf"></i>
+            <span>Chemistry Lab Manual (PDF)</span>
+            <a href="#" class="download-link"><i class="fas fa-download"></i></a>
+          </li>
+          <li>
+            <i class="fas fa-file-pdf"></i>
+            <span>Mathematics Previous Year Paper 2024 (PDF)</span>
+            <a href="#" class="download-link"><i class="fas fa-download"></i></a>
+          </li>
+          <li>
+            <i class="fas fa-file-pdf"></i>
+            <span>IT Basics PPT</span>
+            <a href="#" class="download-link"><i class="fas fa-download"></i></a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Feedback Form -->
+      <section class="dashboard-section">
+        <h2><i class="fas fa-comment-dots"></i> Feedback or Complaint</h2>
+        <form id="feedbackForm" class="feedback-form">
+          <div class="form-group">
+            <label>Subject</label>
+            <select required>
+              <option value="">Select</option>
+              <option value="Faculty">Faculty Feedback</option>
+              <option value="Exam">Exam Query</option>
+              <option value="Facility">Library/Lab Issue</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea rows="4" placeholder="Describe your issue or feedback..." required></textarea>
+          </div>
+          <label>
+            <input type="checkbox" /> Submit Anonymously
+          </label>
+          <button type="submit" class="btn-primary">Submit Feedback</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2025 UMA College Student Portal. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="student.js"></script>
+</body>
+</html>
